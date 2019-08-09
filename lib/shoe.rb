@@ -13,11 +13,10 @@ class Shoe
   def brand=(brand)
     if BRANDS.include? brand
       BRANDS.uniq!
-      puts "Ah, good choice for a #{brand}."
     else
       @brand = brand
       BRANDS << brand
-    end      BRANDS << @brand
+    end     
 
   end
 
