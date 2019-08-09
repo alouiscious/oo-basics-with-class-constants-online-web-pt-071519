@@ -15,7 +15,6 @@ class Shoe
   def brand=(brand)
       @brand = brand
 binding.pry      
-      BRANDS = BRANDS.uniq!
   end
   
 
