@@ -24,7 +24,7 @@ class Book
     end
     
   end
-binding.pry
+# binding.pry
 
 end
 
