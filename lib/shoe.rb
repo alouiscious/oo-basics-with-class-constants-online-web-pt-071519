@@ -33,3 +33,25 @@ class Shoe
 
 
 end
+
+def initialize(title)
+    @title = title
+  end
+
+  def turn_page
+    puts "Flipping the page...wow, you read fast!"
+  end
+  
+  def genre=(genre)
+    if GENRES.include? genre
+      GENRES.uniq!
+      puts "Ah, good choice for a #{genre}."
+    else
+      @genre = genre
+      GENRES << genre
+    end
+    
+  end
+# binding.pry
+
+end
