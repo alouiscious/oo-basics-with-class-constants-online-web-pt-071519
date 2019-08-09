@@ -10,7 +10,7 @@ class Shoe
     @model = model
   end
   
-  def genre=(brand)
+  def brand=(brand)
     if BRANDS.include? brand
       BRANDS.uniq!
       puts "Ah, good choice for a #{brand}."
