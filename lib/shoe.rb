@@ -2,16 +2,22 @@ require 'pry'
 
 class Shoe
   attr_accessor :color, :size, :material, :condition
-  attr_reader :style, :brand
+  attr_reader :model, :brand
   
    BRANDS = []
   
   def initialize(model)
-    @style = style
+    @model = model
   end
   
-  def brands  
-      BRANDS << @brand
+  def genre=(brand)
+    if BRANDS.include? brand
+      BRANDS.uniq!
+      puts "Ah, good choice for a #{brand}."
+    else
+      @brand = brand
+      BRANDS << brand
+    end      BRANDS << @brand
 
   end
   BRANDS.uniq
