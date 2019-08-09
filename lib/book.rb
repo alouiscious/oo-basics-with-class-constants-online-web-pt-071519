@@ -1,3 +1,5 @@
+require 'pry'
+
 class Book
   attr_accessor :author, :page_count
   attr_reader :title, :genre
@@ -13,9 +15,16 @@ class Book
   end
   
   def genre=(genre)
-    @genre = genre
-    GENRES << genre
+    if GENRES.include? genre
+      GENRES.uniq!
+      puts "Ah, good choice for a #{genre}."
+    else
+      @genre = genre
+      GENRES << genre
+    end
+    
   end
+binding.pry
 
 end
-GENRES.uniq
+
