@@ -8,7 +8,11 @@ class Shoe
   
   def initialize(brand)
     @brand = brand
+    if BRANDS.include? brand
+      puts "You really like your #{brand}"
+    else
     BRANDS << brand
+  end
 binding.pry      
     
   end
